@@ -1,6 +1,5 @@
 package baidu.com.commontools.http;
 
-import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
@@ -10,17 +9,11 @@ import com.squareup.okhttp.Response;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import baidu.com.commontools.LibConfig;
 
 /**
- * Created by baidu on 15/11/1.
- * HttpUtils.
  * @author Wayne
  */
 public class HttpUtils {
-
-    private static final String TAG = "HttpUtils";
-    private static final boolean DEBUG = LibConfig.DEBUG;
 
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 

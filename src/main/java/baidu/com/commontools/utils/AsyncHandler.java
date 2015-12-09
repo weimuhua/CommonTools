@@ -11,16 +11,15 @@ public class AsyncHandler {
     }
 
     private Handler mHandler;
-    private HandlerThread mThread;
 
     public static AsyncHandler getInstance() {
         return SingletonHolder.sInstance;
     }
 
     public AsyncHandler() {
-        mThread = new HandlerThread("AsyncHandler");
-        mThread.start();
-        mHandler = new Handler(mThread.getLooper());
+        HandlerThread handlerThread = new HandlerThread("AsyncHandler");
+        handlerThread.start();
+        mHandler = new Handler(handlerThread.getLooper());
     }
 
     public void post(Runnable r) {
