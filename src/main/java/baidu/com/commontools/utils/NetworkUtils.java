@@ -16,7 +16,7 @@ public class NetworkUtils {
         return sCM;
     }
 
-    public boolean isNetworkAvailable(Context cxt) {
+    public boolean isConnected(Context cxt) {
         ConnectivityManager cm = getConnectiveManager(cxt);
         NetworkInfo networkInfo = cm.getActiveNetworkInfo();
         return networkInfo != null && networkInfo.isConnected();
