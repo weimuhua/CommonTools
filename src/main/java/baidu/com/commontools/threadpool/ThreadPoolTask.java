@@ -15,9 +15,7 @@ public class ThreadPoolTask implements Runnable, Comparable<ThreadPoolTask> {
     private long mQueueTime;
 
     public ThreadPoolTask(Runnable r, long queueTime) {
-        mRunnable = r;
-        mPriority = PRIORITY_NORMAL;
-        mQueueTime = queueTime;
+        this(r, PRIORITY_NORMAL, queueTime);
     }
 
     public ThreadPoolTask(Runnable r, int priority, long queueTime) {
