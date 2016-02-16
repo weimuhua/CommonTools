@@ -16,7 +16,7 @@ public class AsyncHandler {
         return SingletonHolder.sInstance;
     }
 
-    public AsyncHandler() {
+    private AsyncHandler() {
         HandlerThread handlerThread = new HandlerThread("AsyncHandler");
         handlerThread.start();
         mHandler = new Handler(handlerThread.getLooper());
