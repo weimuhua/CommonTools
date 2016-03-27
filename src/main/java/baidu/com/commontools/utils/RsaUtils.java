@@ -30,7 +30,7 @@ public class RsaUtils {
 
     private static final String ALGORITHM = "RSA";
     private static final String PROVIDER = "BC";
-    private static final String TRANSFORMATION = "RSA/ECB/PKCS1PADDING";
+    private static final String TRANSFORMATION = "RSA/None/PKCS1PADDING";
 
     private static PublicKey getPublicKey(String pubKey) throws InvalidKeySpecException,
             NoSuchAlgorithmException, NoSuchProviderException {
@@ -213,9 +213,7 @@ public class RsaUtils {
         String readLine;
         StringBuilder sb = new StringBuilder();
         while ((readLine = br.readLine()) != null) {
-            if (readLine.charAt(0) == '-') {
-                continue;
-            } else {
+            if (readLine.charAt(0) != '-') {
                 sb.append(readLine);
                 sb.append('\r');
             }
