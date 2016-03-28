@@ -17,7 +17,7 @@ public class StorageUtils {
     /**
      * Get the available internal storage size (ROM).
      */
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"deprecation", "unused"})
     public static long getInternalStorageAvailableSize() {
         StatFs stat = new StatFs(getInternalStorageDirectory());
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
