@@ -8,6 +8,7 @@ public class BitmapUtils {
      * Check if the photo file is corrupted
      * @param filePath the photo file path
      */
+    @SuppressWarnings("deprecation")
     public static boolean isImgCorrupted(String filePath) {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
