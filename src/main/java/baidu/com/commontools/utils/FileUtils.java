@@ -10,12 +10,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 
 
 public class FileUtils {
 
     public static String readStreamAsString(InputStream is) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
         StringBuilder result = new StringBuilder();
         String line;
 

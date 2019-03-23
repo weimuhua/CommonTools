@@ -21,13 +21,13 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testAdd() throws Exception {
+    public void testAdd() {
         int sum = mCalculator.add(1, 2);
         assertEquals(3, sum);  //为了简洁，往往会static import Assert里面的所有方法。
     }
 
     @Test
-    public void testMultiply() throws Exception {
+    public void testMultiply() {
         int product = mCalculator.multiply(2, 4);
         assertEquals(8, product);
     }

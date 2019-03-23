@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.security.KeyFactory;
 import java.security.NoSuchAlgorithmException;
 import java.security.NoSuchProviderException;
@@ -50,7 +51,7 @@ public class RsaUtils {
         try {
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.ENCRYPT_MODE, getPublicKey(readKey(inputStream)));
-            return cipher.doFinal(content.getBytes("UTF-8"));
+            return cipher.doFinal(content.getBytes(StandardCharsets.UTF_8));
         } catch (Exception e) {
             throw new CipherException(e);
         }
@@ -80,7 +81,7 @@ public class RsaUtils {
         try {
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.ENCRYPT_MODE, getPublicKey(pubKey));
-            return cipher.doFinal(content.getBytes("UTF-8"));
+            return cipher.doFinal(content.getBytes(StandardCharsets.UTF_8));
         } catch (Exception e) {
             throw new CipherException(e);
         }
@@ -138,7 +139,7 @@ public class RsaUtils {
         try {
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.DECRYPT_MODE, getPrivateKey(readKey(inputStream)));
-            return cipher.doFinal(content.getBytes("UTF-8"));
+            return cipher.doFinal(content.getBytes(StandardCharsets.UTF_8));
         } catch (Exception e) {
             throw new CipherException(e);
         }
@@ -159,7 +160,7 @@ public class RsaUtils {
         try {
             Cipher cipher = Cipher.getInstance(TRANSFORMATION);
             cipher.init(Cipher.DECRYPT_MODE, getPrivateKey(priKey));
-            return cipher.doFinal(content.getBytes("UTF-8"));
+            return cipher.doFinal(content.getBytes(StandardCharsets.UTF_8));
         } catch (Exception e) {
             throw new CipherException(e);
         }
