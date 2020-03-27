@@ -4,7 +4,7 @@ package baidu.com.commontools.http;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.v4.util.LruCache;
+import androidx.core.util.LruCache;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
