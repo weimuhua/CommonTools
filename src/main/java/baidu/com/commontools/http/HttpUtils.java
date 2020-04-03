@@ -29,7 +29,7 @@ public class HttpUtils {
      * @return Response
      * @throws IOException
      */
-    private static Response execute(Request request) throws IOException {
+    public static Response execute(Request request) throws IOException {
         return sClient.newCall(request).execute();
     }
 

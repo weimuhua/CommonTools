@@ -1,7 +1,7 @@
 package baidu.com.commontools.threadpool;
 
 import android.os.Process;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 
 public class ThreadPoolTask implements Runnable, Comparable<ThreadPoolTask> {

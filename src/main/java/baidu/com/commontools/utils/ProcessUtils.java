@@ -3,7 +3,7 @@ package baidu.com.commontools.utils;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Process;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import java.util.List;
 
