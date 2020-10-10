@@ -1,13 +1,14 @@
 package baidu.com.commontools.http;
 
-import com.squareup.okhttp.MediaType;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.RequestBody;
-import com.squareup.okhttp.Response;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 
 /**
@@ -19,12 +20,9 @@ public class HttpUtils {
 
     private static final OkHttpClient sClient = new OkHttpClient();
 
-    static {
-        sClient.setConnectTimeout(20, TimeUnit.SECONDS);
-    }
-
     /**
      * 同步方式执行网络请求
+     *
      * @param request http connect request
      * @return Response
      * @throws IOException
