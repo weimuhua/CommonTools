@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+    namespace "baidu.com.commontools"
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
