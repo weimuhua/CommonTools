@@ -24,7 +24,7 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.13.2'
-    implementation("com.squareup.okhttp3:okhttp:4.9.1")
     implementation files('src/libs/volley.jar')
-    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation("com.squareup.okhttp3:okhttp:4.9.1")
+    api 'androidx.annotation:annotation:1.5.0'
 }
